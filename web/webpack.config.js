@@ -1,11 +1,12 @@
 var webpack=require('webpack')
 module.exports={
     entry:[
-        // "webpack/hot/only-dev-server",
+        "webpack/hot/dev-server",
         "./src/app.js"
     ],
     output:{
         path:"./build",
+        publicPath:"http://localhost:8080/assets/",
         filename:'bundle.js'
     },
     module:{
@@ -22,6 +23,7 @@ module.exports={
         extensions:['','.js','.json']
     },
     plugins:[
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
