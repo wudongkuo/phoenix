@@ -11,9 +11,8 @@ module.exports={
     },
     module:{
         loaders:[
-            {test:/\.js?$/,loaders:['react-hot','babel'],exclude:/node_modules/},
             {test:/\.js$/,exclude:/node_modules/,
-                loader:'babel-loader'
+                loaders:['react-hot','babel-loader']
             },
             {test:/\.css$/,loader:"style!css"},
             {test:/\.less$/,loader:'style-loader!css-loader!less-loader'}
@@ -23,7 +22,6 @@ module.exports={
         extensions:['','.js','.json']
     },
     plugins:[
-        new webpack.NoErrorsPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.NoErrorsPlugin()
     ]
 }
