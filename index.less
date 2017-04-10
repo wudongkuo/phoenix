@@ -1,0 +1,48 @@
+.helper(){
+    border: 1px solid blue;
+}
+.box{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    .helper();
+    .article{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        .top{
+          height: 60%;
+          .helper();
+        }
+        .bottom{
+          height: 40%;
+          .helper();
+        }
+        
+    }
+    .slide{
+        width:200px;
+        .helper();
+    }
+}
+
+.schedule-grid{
+    width:100%;
+    height:100%;
+    .header{
+        width:100%;
+        height:50px;
+        display: flex;
+        flex-direction: row;
+        background: red;
+        div{
+            .helper();
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex:1;
+        }
+    }
+}
